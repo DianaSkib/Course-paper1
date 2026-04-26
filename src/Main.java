@@ -5,7 +5,6 @@ public class Main {
 
         EmployeeBook book = new EmployeeBook();
 
-        // Добавляем сотрудников (11 вызовов для проверки переполнения)
         System.out.println("ДОБАВЛЕНИЕ СОТРУДНИКОВ");
         System.out.println("Добавление 1: " + book.addEmployee(new Employee("Иванов И.И.", 1, 100)));
         System.out.println("Добавление 2: " + book.addEmployee(new Employee("Петров П.П.", 2, 200)));
@@ -17,7 +16,7 @@ public class Main {
         System.out.println("Добавление 8: " + book.addEmployee(new Employee("Алексеев А.А.", 1, 180)));
         System.out.println("Добавление 9: " + book.addEmployee(new Employee("Семенов С.С.", 2, 220)));
         System.out.println("Добавление 10: " + book.addEmployee(new Employee("Павлов П.П.", 3, 280)));
-        System.out.println("Добавление 11: " + book.addEmployee(new Employee("Михайлов М.М.", 4, 320))); // Должно вернуть false
+        System.out.println("Добавление 11: " + book.addEmployee(new Employee("Михайлов М.М.", 4, 320)));
 
         System.out.println("СПИСОК ВСЕХ СОТРУДНИКОВ");
         book.printAllEmployees();

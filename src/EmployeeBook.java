@@ -1,7 +1,6 @@
 public class EmployeeBook {
     private Employee[] employees = new Employee[10];
 
-    // Метод добавления сотрудника
     public boolean addEmployee(Employee employee) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] == null) {
@@ -12,7 +11,6 @@ public class EmployeeBook {
         return false;
     }
 
-    // Получить список всех сотрудников
     public void printAllEmployees() {
         for (Employee employee : employees) {
             if (employee != null) {
@@ -21,7 +19,6 @@ public class EmployeeBook {
         }
     }
 
-    // Подсчитать среднее значение зарплат
     public double calculateAverageSalary() {
         int sum = 0;
         int count = 0;
@@ -36,7 +33,6 @@ public class EmployeeBook {
         return count > 0 ? (double) sum / count : 0;
     }
 
-    // Вывести значения налогов
     public void printTaxes(String taxType) {
         for (Employee employee : employees) {
             if (employee != null) {
@@ -68,7 +64,6 @@ public class EmployeeBook {
         }
     }
 
-    // Индексировать зарплату сотрудников отдела
     public void indexSalaries(int department, double percent) {
         double coefficient = 1 + percent / 100;
 
@@ -81,7 +76,6 @@ public class EmployeeBook {
         }
     }
 
-    // Найти первого сотрудника отдела с зарплатой больше указанной
     public void findFirstEmployeeWithHigherSalary(int department, int wage) {
         for (int i = 0; i < employees.length; i++) {
             Employee employee = employees[i];
@@ -94,7 +88,6 @@ public class EmployeeBook {
         }
     }
 
-    // Найти первых employeeNumber сотрудников с зарплатой меньше wage
     public void findEmployeesWithLowerSalary(int wage, int employeeNumber) {
         int foundCount = 0;
         int index = 0;
@@ -110,7 +103,6 @@ public class EmployeeBook {
         }
     }
 
-    // Проверить, есть ли сотрудник с такой же зарплатой
     public boolean containsEmployee(Employee employee) {
         for (Employee emp : employees) {
             if (emp != null && emp.equals(employee)) {
@@ -120,7 +112,6 @@ public class EmployeeBook {
         return false;
     }
 
-    // Получить сотрудника по ID
     public Employee getEmployeeById(int id) {
         for (Employee employee : employees) {
             if (employee != null && employee.getId() == id) {

@@ -1,12 +1,11 @@
 public class Employee {
-    private static int idCounter = 1; // Статический счётчик для генерации ID
+    private static int idCounter = 1;
 
     private int id;
     private String fullName;
     private int department;
     private int salary;
 
-    // Конструктор
     public Employee(String fullName, int department, int salary) {
         this.id = idCounter++;
         this.fullName = fullName;
